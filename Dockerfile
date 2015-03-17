@@ -1,12 +1,14 @@
 # VERSION 0.1
 # DOCKER-VERSION  0.7.3
+# Fork of Docker Registry for Socrata
+# Built and Run via Jenkins
 # AUTHOR:         Sam Alba <sam@docker.com>
 # DESCRIPTION:    Image with docker-registry project and dependecies
 # TO_BUILD:       docker build -rm -t registry .
 # TO_RUN:         docker run -p 5000:5000 registry
 
-# Latest Ubuntu LTS
-FROM ubuntu:14.04
+# Latest base image from public socrata repo
+FROM socrata/base
 
 # Update
 RUN apt-get update \
