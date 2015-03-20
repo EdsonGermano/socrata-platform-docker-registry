@@ -1,0 +1,6 @@
+#!/bin/bash
+
+set -e
+
+./dev/shm/infrastructure-credentials
+exec docker-registry

@@ -9,6 +9,8 @@
 
 # Latest base image from public socrata repo
 FROM socrata/base
+# Run script for clortho envs
+ADD ship.d /etc/ship.d
 
 # Update
 RUN apt-get update \
@@ -43,4 +45,3 @@ ENV SETTINGS_FLAVOR dev
 
 EXPOSE 5000
 
-CMD ["docker-registry"]
