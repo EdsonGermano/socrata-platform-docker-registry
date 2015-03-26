@@ -2,5 +2,7 @@
 
 set -e
 
-./dev/shm/infrastructure-credentials
+chmod 700 /dev/shm/infrastructure-credentials
+
+source /dev/shm/infrastructure-credentials
 exec docker-registry
